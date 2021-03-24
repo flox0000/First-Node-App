@@ -7,14 +7,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-
-
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
 })
 
 app.post("/", function (req, res) {
-
 
     const location = req.body.cityName;
     const apiKey = "a0823ff72c7a112f447371cb9cbc2dca";
@@ -41,16 +38,7 @@ app.post("/", function (req, res) {
 
         })
     })
-
-
-
-
 })
-
-
-
-
-
 
 app.listen(3000, function () {
     console.log("Server is running on port 3000");
